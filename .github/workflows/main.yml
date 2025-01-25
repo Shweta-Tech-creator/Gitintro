@@ -1,0 +1,17 @@
+ name: Echo Hello on Push to Main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  echo-hello:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - Name: Check out the repository
+        uses: actions/checkout@v2
+        
+      - Name: Echo Hello
+        run: echo "Hello"
